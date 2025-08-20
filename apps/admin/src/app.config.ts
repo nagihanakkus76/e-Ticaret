@@ -16,6 +16,6 @@ export const appConfig: ApplicationConfig = {
     provideBrowserGlobalErrorListeners(),
     provideZonelessChangeDetection(),
     provideRouter(appRoutes),
-    {provide:LOCALE_ID, useValue:'tr'}
+    { provide: LOCALE_ID, useValue: 'tr' }
   ],
 };

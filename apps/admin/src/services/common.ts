@@ -6,9 +6,9 @@ import { BreadcrumbModel } from '../pages/layouts/breadcrumb/breadcrumb';
 })
 export class Common {
 
-  data:BreadcrumbModel[] = [];
+  data: BreadcrumbModel[] = [];
 
-  set(data:BreadcrumbModel[]){
+  set(data: BreadcrumbModel[]) {
     const val: BreadcrumbModel = {
       title: "Ana Sayfa",
       icon: "home",

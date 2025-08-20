@@ -7,6 +7,4 @@ import Blank from '../../components/blank/blank';
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export default class Login {
-
-}
+export default class Login { }

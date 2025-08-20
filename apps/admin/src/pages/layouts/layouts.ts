@@ -16,9 +16,9 @@ export default class Layouts {
   readonly search = signal<string>("")
   readonly time = signal<Date | string>("")
   readonly navigations = computed(() => navigations)
-  constructor(){
-    setInterval(()=>{
+  constructor() {
+    setInterval(() => {
       this.time.set(new Date())
-    },1000)
+    }, 1000)
   }
 }

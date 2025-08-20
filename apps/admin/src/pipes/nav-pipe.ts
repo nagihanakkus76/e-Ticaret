@@ -7,7 +7,6 @@ import { NavigationModel } from '../navigation';
 export class NavPipe implements PipeTransform {
 
   transform(value: NavigationModel[], search: string): NavigationModel[] {
-  return value.filter(p => p.title.toLocaleLowerCase().includes(search.toLocaleLowerCase()));
+    return value.filter(p => p.title.toLocaleLowerCase().includes(search.toLocaleLowerCase()));
   }
-
 }

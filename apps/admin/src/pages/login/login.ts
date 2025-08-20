@@ -1,7 +1,8 @@
 import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
+import Blank from '../../components/blank/blank';
 
 @Component({
-  imports: [],
+  imports: [Blank],
   templateUrl: './login.html',
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush

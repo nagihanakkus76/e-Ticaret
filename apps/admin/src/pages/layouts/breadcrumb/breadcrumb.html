@@ -1,0 +1,10 @@
+<ol class="breadcrumb">
+  @for (data of data(); track $index) {
+  <li class="breadcrumb-item">
+    <a [routerLink]="data.url" class="d-flex align-items-center">
+      <span class="material-symbols-outlined">{{data.icon}}</span>
+      <span>{{data.title}}</span>
+    </a>
+  </li>
+}
+</ol>

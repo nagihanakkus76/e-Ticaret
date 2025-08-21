@@ -11,12 +11,12 @@ export const navigations: NavigationModel[] = [
   },
   {
     title: "Ürünler",
-    url: "/product",
-    icon: "box"
+    url: "/products",
+    icon: "deployed_code"
+  },
+  {
+    title: "Kategoriler",
+    url: "/categories",
+    icon: "category"
   }
 ]
-
-
-
-
-

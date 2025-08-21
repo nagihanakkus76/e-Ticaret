@@ -1,0 +1,78 @@
+<app-blank pageTitle="Ürünler" [breadcrumbs]="breadcrumbs()"/>
+
+<flexi-grid
+[data]="datas()"
+[loading]="loading()"
+[showCaption]="true"
+captionTitle="Ürün Listesi"
+[showExportExcelBtn]="true"
+language="tr"
+exportExcelFileName="ürünler"
+(onRefresh)="result.reload()"
+>
+<ng-template flexiGridCaptionCommandTemplate>
+  <flexi-button
+  routerLink="/products/create"
+  btnIcon="add"
+  btnColor="primary"
+  title="Ürün Ekle"
+  flexiTooltip/>
+</ng-template>
+
+  <flexi-grid-column
+  field="imageUrl"
+  title="Ürün Resmi"
+  [filterable]="false"
+  textAlign="center">
+  <ng-template flexiGridCellTemplate let-item>
+    <img
+    [src]="item.imageUrl"
+    width="70"
+    height="70"
+    style="object-fit: contain;">
+  </ng-template>
+</flexi-grid-column>
+
+  <flexi-grid-column
+  field="name"
+  title="Ürün Adı"/>
+
+  <flexi-grid-column
+  field="categoryName"
+  title="Kategori"
+  filterType="select"
+  [filterData]="categoryFilter()"/>
+
+  <flexi-grid-column
+  field="price"
+  title="Ürün Fiyatı"
+  filterType="number"
+  textAlign="right"
+  format="c"
+  symbol="₺"/>
+
+  <flexi-grid-column
+  field="stock"
+  title="Stok Adedi"
+  filterType="number"
+  textAlign="right"/>
+
+<ng-template flexiGridColumnCommandTemplate let-item>
+  <flexi-button
+  [routerLink]="['/', 'products', 'edit', item.id]"
+  btnIcon="edit"
+  btnColor="info"
+  btnSize="small"
+  title="Güncelle"
+  flexiTooltip/>
+
+  <flexi-button
+  (click)="delete(item.id)"
+  btnIcon="delete"
+  btnColor="danger"
+  btnSize="small"
+  title="Sil"
+  flexiTooltip/>
+</ng-template>
+
+</flexi-grid>

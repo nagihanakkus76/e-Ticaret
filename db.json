@@ -38,51 +38,6 @@
       "stock": "10",
       "categoryId": "746c",
       "categoryName": "Telefon"
-    },
-    {
-      "id": "4ede8ada-e4b4-4a75-8b70-871c85f5ef56",
-      "name": "asyaaasfdxcv",
-      "imageUrl": "nnnnnnn",
-      "price": 4545,
-      "stock": "54",
-      "categoryId": "8507",
-      "categoryName": "Bilgisayar"
-    },
-    {
-      "id": "4ede8ada-e4b4-4a75-8b70-871c85f5ef56",
-      "name": "assssss",
-      "imageUrl": "asa",
-      "price": 0.23,
-      "stock": "03",
-      "categoryId": "746c",
-      "categoryName": "Telefon"
-    },
-    {
-      "id": "ef20207a-38ad-4324-bc4a-b83fc783d0bf",
-      "name": "aliiii",
-      "imageUrl": "fhgfgh",
-      "price": 223,
-      "stock": "4",
-      "categoryId": "53ef",
-      "categoryName": "Akıllı Saat"
-    },
-    {
-      "id": "ef20207a-38ad-4324-rc4a-b83fc783d0bf",
-      "name": "Vileda",
-      "imageUrl": "dfgg",
-      "price": 356,
-      "stock": "6",
-      "categoryId": "005c",
-      "categoryName": "Temizlik Aletleri"
-    },
-    {
-      "id": "462edee5-8eed-4251-8d08-527c44457aa3",
-      "name": "kköjk",
-      "imageUrl": "möm",
-      "price": 654,
-      "stock": "7",
-      "categoryId": "746c",
-      "categoryName": "Telefon"
     }
   ],
   "categories": [
@@ -128,7 +83,7 @@
       "fullName": "Nagihan Akkuş",
       "userName": "nagihan.",
       "email": "nagihan@gmail.com",
-      "password": "123456",
+      "password": "12345",
       "isAdmin": true
     },
     {

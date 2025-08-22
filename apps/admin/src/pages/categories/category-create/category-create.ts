@@ -6,6 +6,7 @@ import { CategoryModel, initialCategory } from '../categories';
 import { HttpClient } from '@angular/common/http';
 import { FlexiToastService } from 'flexi-toast';
 import { ActivatedRoute, Router } from '@angular/router';
+import { BreadcrumbModel } from '../../layouts/breadcrumb/breadcrumb';
 
 @Component({
   imports: [Blank, FormsModule],
@@ -19,6 +20,8 @@ export default class CategoryCreate {
   readonly title = computed(() => this.id() ? "Kategori Güncelle" : "Kategori Ekle")
   readonly btnName = computed(() => this.id() ? "Güncelle" : "Kaydet")
 
+  readonly breadcrumbs = signal<BreadcrumbModel[]>([{ title: 'Kategoriler', url: '/categories', icon: 'category'}])
+
   readonly #http = inject(HttpClient)
   readonly #router = inject(Router)
   readonly #toast = inject(FlexiToastService)
@@ -29,6 +32,9 @@ export default class CategoryCreate {
     this.#activate.params.subscribe(res => {
       if (res["id"]) {
         this.id.set(res["id"]);
+      } else {
+        this.breadcrumbs.update(prev => [...prev,
+        { title: 'Ekle', url: '/categories/create', icon: 'add'},])
       }
     })
   }
@@ -38,10 +44,12 @@ export default class CategoryCreate {
     loader: async () => {
       var res = await lastValueFrom(
         this.#http.get<CategoryModel>(`apiUrl/categories/${this.id()}`)
-      );
+      )
+      this.breadcrumbs.update(prev => [...prev,
+      { title: res.name, url: `/categories/edit/${this.id()}`, icon: 'edit_document'}])
       return res;
     }
-  });
+  })
 
   save(form: NgForm) {
     if (!form.valid) return;

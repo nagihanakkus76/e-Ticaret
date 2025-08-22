@@ -36,6 +36,8 @@ export default class ProductCreate {
       var res = await lastValueFrom(
         this.#http.get<ProductModel>(`apiUrl/products/${this.id()}`)
       )
+       this.breadcrumbs.update(prev => [...prev,
+          {title: res.name, url: `/products/edit/${this.id()}`, icon: 'edit_document'}]);
       return res;
     }
   });
@@ -49,6 +51,9 @@ export default class ProductCreate {
     this.#activate.params.subscribe(res => {
       if (res["id"]) {
         this.id.set(res["id"]);
+      }else{
+        this.breadcrumbs.update(prev => [...prev,
+          {title: 'Ekle', url: '/products/create', icon: 'add'}])
       }
     })
   }

@@ -1,8 +1,7 @@
 <app-blank
-pageTitle="Kategori Ekle"
-[breadcrumbs]="[ {title: 'Kategoriler', url: '/categories', icon: 'category'},
-                 {title: id() ? 'Güncelle' : 'Ekle', url: '/categories/create', icon: 'add'}]" />
-                 
+[pageTitle]= "title()"
+ [breadcrumbs]="breadcrumbs()" />
+
 <div class="row">
   <div class="col-md-4 col-12">
     <div class="card">

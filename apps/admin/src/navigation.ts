@@ -10,13 +10,18 @@ export const navigations: NavigationModel[] = [
     icon: "home"
   },
   {
+    title: "Kategoriler",
+    url: "/categories",
+    icon: "category"
+  },
+  {
     title: "Ürünler",
     url: "/products",
     icon: "deployed_code"
   },
   {
-    title: "Kategoriler",
-    url: "/categories",
-    icon: "category"
+    title: "Kullanıcılar",
+    url: "/users",
+    icon: "group"
   }
 ]

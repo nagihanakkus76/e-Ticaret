@@ -2,15 +2,15 @@ import { Routes } from "@angular/router";
 
 const routes: Routes = [
   {
-    path: "",
+    path: '',
     loadComponent: () => import('./categories')
   },
   {
-    path: "create",
+    path: 'create',
     loadComponent: () => import('./category-create/category-create')
   },
   {
-    path: "edit/:id",
+    path: 'edit/:id',
     loadComponent: () => import('./category-create/category-create')
   }
 ]

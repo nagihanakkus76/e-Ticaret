@@ -7,9 +7,9 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { FlexiToastService } from 'flexi-toast';
 import { NgxMaskDirective } from 'ngx-mask';
 import { lastValueFrom } from 'rxjs';
-import { initialProduct, ProductModel } from '../products';
-import { CategoryModel } from '../../categories/categories';
 import { FlexiSelectModule } from 'flexi-select';
+import { CategoryModel } from '@shared/models/category.model';
+import { ProductModel, initialProduct } from '@shared/models/product.model';
 
 @Component({
   imports: [Blank, FormsModule, NgxMaskDirective, FlexiSelectModule],

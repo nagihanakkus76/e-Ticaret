@@ -3,7 +3,7 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { FlexiToastService } from 'flexi-toast';
 import { Router } from '@angular/router';
-import { UserModel } from '../users/users';
+import { UserModel } from '@shared/models/user.model';
 
 @Component({
   imports: [FormsModule],

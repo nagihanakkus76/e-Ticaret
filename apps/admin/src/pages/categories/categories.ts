@@ -5,17 +5,7 @@ import { FlexiGridModule } from 'flexi-grid';
 import { HttpClient, httpResource } from '@angular/common/http';
 import { RouterLink } from '@angular/router';
 import { FlexiToastService } from 'flexi-toast';
-
-export interface CategoryModel {
-  id: string,
-  name: string
-}
-
-export const initialCategory: CategoryModel = {
-  id: crypto.randomUUID(),
-  name: ""
-}
-
+import { CategoryModel } from '@shared/models/category.model';
 @Component({
   imports: [Blank, FlexiGridModule, RouterLink],
   templateUrl: './categories.html',
@@ -24,7 +14,6 @@ export const initialCategory: CategoryModel = {
 })
 
 export default class Categories {
-
   readonly result = httpResource<CategoryModel[]>(() => "apiUrl/categories")
   readonly breadcrumbs = signal<BreadcrumbModel[]>([{ title: "Kategoriler", url: "/categories", icon: "category" }])
   readonly datas = computed(() => this.result.value() ?? [])

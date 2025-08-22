@@ -2,11 +2,11 @@ import { ChangeDetectionStrategy, Component, computed, inject, linkedSignal, res
 import { FormsModule, NgForm } from '@angular/forms';
 import Blank from 'apps/admin/src/components/blank/blank';
 import { lastValueFrom } from 'rxjs';
-import { CategoryModel, initialCategory } from '../categories';
 import { HttpClient } from '@angular/common/http';
 import { FlexiToastService } from 'flexi-toast';
 import { ActivatedRoute, Router } from '@angular/router';
 import { BreadcrumbModel } from '../../layouts/breadcrumb/breadcrumb';
+import { CategoryModel, initialCategory } from '@shared/models/category.model';
 
 @Component({
   imports: [Blank, FormsModule],

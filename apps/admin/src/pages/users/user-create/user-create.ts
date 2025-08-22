@@ -3,11 +3,10 @@ import { ChangeDetectionStrategy, Component, computed, inject, linkedSignal, res
 import { ActivatedRoute, Router } from '@angular/router';
 import { FlexiToastService } from 'flexi-toast';
 import { lastValueFrom } from 'rxjs';
-import { initialUser, UserModel } from '../users';
 import { FormsModule, NgForm } from '@angular/forms';
 import Blank from 'apps/admin/src/components/blank/blank';
 import { BreadcrumbModel } from '../../layouts/breadcrumb/breadcrumb';
-
+import { UserModel, initialUser } from '@shared/models/user.model';
 @Component({
   imports: [Blank, FormsModule],
   templateUrl: './user-create.html',

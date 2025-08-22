@@ -5,6 +5,7 @@ import { FlexiGridFilterDataModel, FlexiGridModule } from 'flexi-grid';
 import { HttpClient, httpResource } from '@angular/common/http';
 import { RouterLink } from '@angular/router';
 import { FlexiToastService } from 'flexi-toast';
+import { CategoryModel } from '../categories/categories';
 
 export interface ProductModel {
   id: string,
@@ -39,15 +40,15 @@ export default class Products {
   readonly datas = computed(() => this.result.value() ?? [])
   readonly loading = computed(() => this.result.isLoading())
 
+  readonly categoryResult = httpResource<CategoryModel[]>(() => 'apiUrl/categories')
+
   readonly #toast = inject(FlexiToastService)
   readonly #http = inject(HttpClient)
 
-  readonly categoryFilter = signal<FlexiGridFilterDataModel[]>([
-    {
-      name: "Telefon",
-      value: "Telefon"
-    }
-  ])
+  readonly categoryFilter = computed<FlexiGridFilterDataModel[]>(() => {
+    const categories = this.categoryResult.value() ?? []
+    return categories.map<FlexiGridFilterDataModel>((val) => ({ name: val.name, value: val.name }));
+  })
 
   delete(id: string) {
     this.#toast.showSwal("Ürünü Silinecek!", "Ürünü silmek istiyor musunuz?", "Sil", () => {

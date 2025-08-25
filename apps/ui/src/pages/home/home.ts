@@ -11,13 +11,13 @@ import { ActivatedRoute } from '@angular/router';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export default class Home {
+  readonly placeholderCount = signal<number[]>([1, 2, 3]);
   readonly categoryUrl = signal<string | undefined>(undefined);
   readonly categoryUrlPrev = this.computedPrevious(this.categoryUrl);
   readonly limit = signal<number>(6);
   readonly start = signal<number>(0);
 
   readonly #activate = inject(ActivatedRoute);
-
 
   constructor() {
     this.#activate.params.subscribe(res => {
@@ -49,10 +49,10 @@ export default class Home {
     return endpoint;
   });
 
+  readonly loading = computed(() => this.result.isLoading())
+
   readonly data = computed(() => this.result.value() ?? []);
   readonly dataSignal = signal<ProductModel[]>([]);
-
-
 
   onScroll() {
     this.limit.update(prev => prev + 6);

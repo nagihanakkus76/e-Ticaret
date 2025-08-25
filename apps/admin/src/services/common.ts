@@ -10,6 +10,13 @@ export class Common {
   readonly data = signal<BreadcrumbModel[]>([])
   readonly user = signal<UserModel | undefined>(undefined)
 
+  constructure() {
+    const response: string | null = localStorage.getItem("response")
+    if (response) {
+      this.user.set(JSON.parse(response))
+    }
+  }
+
   set(data: BreadcrumbModel[]) {
     const val: BreadcrumbModel = {
       title: "Ana Sayfa",

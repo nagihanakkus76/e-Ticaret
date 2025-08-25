@@ -4,6 +4,7 @@ import { ProductModel } from '@shared/models/product.model'
 import { TrCurrencyPipe } from 'tr-currency';
 import { InfiniteScrollDirective } from 'ngx-infinite-scroll';
 import { ActivatedRoute } from '@angular/router';
+import { Common } from '../../services/common';
 @Component({
   imports: [TrCurrencyPipe, InfiniteScrollDirective],
   templateUrl: './home.html',
@@ -14,10 +15,13 @@ export default class Home {
   readonly placeholderCount = signal<number[]>([1, 2, 3]);
   readonly categoryUrl = signal<string | undefined>(undefined);
   readonly categoryUrlPrev = this.computedPrevious(this.categoryUrl);
-  readonly limit = signal<number>(6);
+  readonly limit = signal<number>(12);
   readonly start = signal<number>(0);
 
+  readonly user = computed(() => this.#common.user())
+
   readonly #activate = inject(ActivatedRoute);
+  readonly #common = inject(Common);
 
   constructor() {
     this.#activate.params.subscribe(res => {
@@ -55,6 +59,8 @@ export default class Home {
   readonly dataSignal = signal<ProductModel[]>([]);
 
   onScroll() {
+
+    if (this.start() >= 0) return;  //gelen ürün saysının counutu alıp vermemiz gerekiyordu ama json-server da öyle bir endpoint olmadığı için şimdilik manuel yazdık
     this.limit.update(prev => prev + 6);
     this.start.update(prev => prev + 6);
   }

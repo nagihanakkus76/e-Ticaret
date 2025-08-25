@@ -1,3 +1,4 @@
+import { v4 as uuidv4 } from 'uuid';
 export interface ProductModel {
   id: string,
   name: string,
@@ -10,7 +11,7 @@ export interface ProductModel {
 }
 
 export const initialProduct: ProductModel = {
-  id: crypto.randomUUID(),
+  id: uuidv4(),
   name: "",
   imageUrl: "",
   price: 0,

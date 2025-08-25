@@ -28,7 +28,11 @@
         <img [src]="val.imageUrl" [alt]="val.name">
         <h3>{{val.name}}</h3>
         <p class="price">{{val.price | trCurrency:'₺':false}}</p>
-        <button class="add-to-cart">Sepete Ekle</button>
+        @if(user()){
+        <button class="add-to-cart" disable>Sepete Ekle</button>
+        }@else {
+        <button class="add-to-cart" disable>Giriş Yapmalısınız</button>
+        }
       </div>
       }
 

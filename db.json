@@ -29,6 +29,7 @@
       "categoryId": "53ef",
       "categoryName": "Akıllı Saat",
       "categoryUrl": "akilli-saat"
+
     },
     {
       "id": "ssss",
@@ -37,7 +38,9 @@
       "price": 40999,
       "stock": "10",
       "categoryId": "746c",
-      "categoryName": "Telefon"
+      "categoryName": "Telefon",
+      "categoryUrl": "telefon"
+
     },
      {
       "id": "12d3",
@@ -76,7 +79,9 @@
       "price": 40999,
       "stock": "10",
       "categoryId": "746c",
-      "categoryName": "Telefon"
+      "categoryName": "Telefon",
+      "categoryUrl": "telefon"
+
     },
      {
       "id": "12gfd3",
@@ -115,7 +120,8 @@
       "price": 40999,
       "stock": "10",
       "categoryId": "746c",
-      "categoryName": "Telefon"
+      "categoryName": "Telefon",
+      "categoryUrl": "telefon"
     }
   ],
   "categories": [
@@ -142,7 +148,7 @@
     {
       "id": "b8fc",
       "name": "Oyun",
-      "url": "oyun"
+      "url": "Oyun"
     },
     {
       "id": "11111",

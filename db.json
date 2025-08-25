@@ -29,7 +29,6 @@
       "categoryId": "53ef",
       "categoryName": "Akıllı Saat",
       "categoryUrl": "akilli-saat"
-
     },
     {
       "id": "ssss",
@@ -40,9 +39,8 @@
       "categoryId": "746c",
       "categoryName": "Telefon",
       "categoryUrl": "telefon"
-
     },
-     {
+    {
       "id": "12d3",
       "imageUrl": "https://ffo3gv1cf3ir.merlincdn.net//SiteAssets/pasaj/crop/cg/1698313241770/1698313246580/1698313246580_600x450.png?1749680495000",
       "name": "Iphone 15 Pro2",
@@ -81,9 +79,8 @@
       "categoryId": "746c",
       "categoryName": "Telefon",
       "categoryUrl": "telefon"
-
     },
-     {
+    {
       "id": "12gfd3",
       "imageUrl": "https://ffo3gv1cf3ir.merlincdn.net//SiteAssets/pasaj/crop/cg/1698313241770/1698313246580/1698313246580_600x450.png?1749680495000",
       "name": "Iphone 15 Pro2",
@@ -189,6 +186,66 @@
       "email": "can@gmail.com",
       "password": "123456",
       "isAdmin": true
+    },
+    {
+      "id": "6811a3c2-b79b-4072-b308-368298d8b4be",
+      "firstName": "Ali",
+      "lastName": "Yılmaz",
+      "fullName": "Ali Yılmaz",
+      "userName": "ali.",
+      "email": "aliyilmaz@gmail.com",
+      "password": "12345",
+      "isAdmin": false
+    },
+    {
+      "id": "6811a3c2-b79b-4072-b308-368298d8k4be",
+      "firstName": "Veli",
+      "lastName": "Yılmaz",
+      "fullName": "Veli Yılmaz",
+      "userName": "veli.",
+      "email": "veliyilmaz@gmail.com",
+      "password": "12345",
+      "isAdmin": false
+    },
+    {
+      "id": "919e081a-cc4c-4004-84ab-15a86781731c",
+      "firstName": "cemil",
+      "lastName": "yıldız",
+      "fullName": "cemil yıldız",
+      "userName": "cemil.",
+      "email": "cemil@gmail.com",
+      "password": "12345",
+      "isAdmin": false
+    },
+    {
+      "id": "919e081a-cc4c-4004-84ab-15a86781731c",
+      "firstName": "cenan",
+      "lastName": "yıldız",
+      "fullName": "cenan yıldız",
+      "userName": "cenan.",
+      "email": "cenan@gmail.com",
+      "password": "12345",
+      "isAdmin": false
+    },
+    {
+      "id": "c36980f9-0d02-463e-83a1-db6a63402bf3",
+      "firstName": "weli",
+      "lastName": "weli",
+      "fullName": "weli weli",
+      "userName": "weli",
+      "email": "weli@gmail.com",
+      "password": "12345",
+      "isAdmin": false
+    },
+    {
+      "id": "bf65c7e7-cfac-4962-b1ae-18739c85fd9a",
+      "firstName": "halil",
+      "lastName": "halil",
+      "fullName": "halil halil",
+      "userName": "halil",
+      "email": "halil@gmail.com",
+      "password": "12345",
+      "isAdmin": false
     }
   ],
   "baskets": [

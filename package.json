@@ -16,7 +16,8 @@
     "flexi-toast": "^20.0.3",
     "ngx-infinite-scroll": "^20.0.0",
     "ngx-mask": "^20.0.3",
-    "rxjs": "~7.8.0"
+    "rxjs": "~7.8.0",
+    "uuid": "^11.1.0"
   },
   "devDependencies": {
     "@angular-devkit/core": "~20.1.0",
